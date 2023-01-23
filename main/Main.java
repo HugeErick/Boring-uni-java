@@ -62,6 +62,7 @@ public class Main {
     } else {
       System.out.println("Invalid choice. Please choose either 'circle' or 'square'.");
     }
+    scanner.close();
   }
 
   
