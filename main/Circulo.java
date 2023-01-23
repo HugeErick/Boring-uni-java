@@ -4,9 +4,12 @@ public class Circulo {
     private int radio;
     private int id;
 
-    public Circulo(int id) {
-        this.id = id;
-        this.radio = id;
+    public Circulo(int radio) {
+        this.radio = radio;
+    }
+
+    public Circulo() {
+        this(178145);
     }
 
     public double getCircunferencia() {

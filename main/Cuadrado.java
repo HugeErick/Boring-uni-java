@@ -7,15 +7,13 @@ public class Cuadrado {
     private double area;
     private int id;
 
-    public Cuadrado(double lado, int id) {
-        if(lado == 0) {
-          this.lado = id;
-        }
+    public Cuadrado(double lado) {
         this.lado = lado;
-        this.id = id;
-        this.diagonal = Math.sqrt(2 * (lado * lado));
-        this.perimetro = 4 * lado;
-        this.area = lado * lado;
+    }
+
+    public Cuadrado() {
+        
+       this(178145); 
     }
 
     public double getLado() {
@@ -23,14 +21,17 @@ public class Cuadrado {
     }
 
     public double getDiagonal() {
+        this.diagonal = Math.sqrt(2 * (lado * lado));
         return diagonal;
     }
 
     public double getPerimetro() {
+        this.perimetro = 4 * lado;
         return perimetro;
     }
 
     public double getArea() {
+        this.area = lado * lado;
         return area;
     }
 
