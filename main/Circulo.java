@@ -2,7 +2,6 @@ package main;
 
 public class Circulo {
     private int radio;
-    private int id;
 
     public Circulo(int radio) {
         this.radio = radio;
