@@ -9,7 +9,45 @@ public class Main {
   
     public static void main(String[] args) {
     System.out.println("Hello! in order to exit pls enter ctrl + c in terminal");
-   askingUser(); 
+    System.out.println("this is the menu of \"examen\"");
+    System.out.println("the string u enter will be the one evaluated for all string methods");
+    System.out.println("Please enter string");
+    String inputS = scanner.next();
+    System.out.println("u put: " + inputS);
+    Examen examen = new Examen();
+    String mayusc = examen.primeraMayuscula(inputS);
+    System.out.println(mayusc);
+    String invertir = examen.invertirCadena(inputS);
+    System.out.println(invertir);
+    String vocaMayusc = examen.vocalesMayuscula(inputS);
+    System.out.println(vocaMayusc);
+    System.out.println("FizzBuzz y/n?");
+    String yesno = scanner.next();
+    String lowyesno = yesno.toLowerCase();
+    if(lowyesno.equals("n") || lowyesno.equals("no")){
+      System.exit(0);
+    }
+    System.out.println("==========================================");
+    examen.fizzBuzz();
+    System.out.println("=============================================");
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    System.out.println("continuing with boolean palindrom");
+    boolean palindromo = examen.palindromo(inputS);
+    System.out.println("palindrom: " + palindromo);
+
+    System.out.println("do u want to proceed with calculating circles and squares? y/n");
+    yesno = scanner.next();
+    lowyesno = yesno.toLowerCase();
+    if(lowyesno.equals("n") || lowyesno.equals("no")){
+      System.exit(0);
+    } else {
+      askingUser(); 
+    }
+
   }
 
   public static void askingNextQ() {
