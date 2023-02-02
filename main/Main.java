@@ -12,7 +12,7 @@ public class Main {
     System.out.println("this is the menu of \"examen\"");
     System.out.println("the string u enter will be the one evaluated for all string methods");
     System.out.println("Please enter string");
-    String inputS = scanner.next();
+    String inputS = scanner.nextLine();
     System.out.println("u put: " + inputS);
     Examen examen = new Examen();
     String mayusc = examen.primeraMayuscula(inputS);
