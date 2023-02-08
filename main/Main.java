@@ -2,12 +2,49 @@ package main;
 
 import java.util.Scanner;
 
+import main.arreglos.Myarrays;
+
 //Erick Gonzalez Parada #171845
 public class Main {
   public static Scanner scanner = new Scanner(System.in);
   public static boolean keepRunning = true;
   
     public static void main(String[] args) {
+    Myarrays myarrays = new Myarrays();
+    System.out.println("looking for values");
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    int position = myarrays.searchingForValue(myarrays.intArray, 5);
+    int pos2 = myarrays.searchForValueString(myarrays.namesArray, "Francisco");
+    System.out.println("position of value 5: " + position);
+    System.out.println("position of value \"Francisco\": " + pos2);
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    System.out.println("deleting values");
+    myarrays.deleteValue(myarrays.intArray, 5);
+    myarrays.deleteStringVal(myarrays.namesArray, "Francisco");
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    System.out.println("scroll up to see everything");
+    System.out.println("desea continuar al contenido del examen? y/n");
+    String answer = scanner.next();
+    if(answer.equals("n") || answer.equals("no")){
+      System.exit(0);
+    }
+    scanner.nextLine();
+
+
+
+    
     System.out.println("Hello! in order to exit pls enter ctrl + c in terminal");
     System.out.println("this is the menu of \"examen\"");
     System.out.println("the string u enter will be the one evaluated for all string methods");
