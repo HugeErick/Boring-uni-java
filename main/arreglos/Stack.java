@@ -4,14 +4,10 @@ import java.util.ArrayList;
 
 public class Stack {
     private ArrayList<Character> elements;
-    private int Max;
-    private char[] queue;
-    private int tail;
 
-    public Stack(int Max) {
-        this.Max = Max;
-        queue = new char[Max];
-        tail = 0;
+
+    public Stack() {
+        
         elements = new ArrayList<>();
     }
 
@@ -32,25 +28,31 @@ public class Stack {
         }
     }
 
-    //agregar un elemento a la cola
-    public void enqueue(char item) {
-        if (tail < Max) {
-            queue[tail++] = item;
+    public char[] reverseArray(char[] inputArray) {
+        for (int i = 0; i < inputArray.length; i++) {
+            push(inputArray[i]);
         }
+        char[] reversedArray = new char[inputArray.length];
+        for (int i = inputArray.length - 1; i >= 0; i--) {
+            reversedArray[i] = pop();
+        }
+        return reversedArray;
     }
 
-    //extraer un elemento de la cola
-    public char dequeue() {
-        if (tail == 0) {
-            return '#';
-        } else {
-            char item = queue[0];
-            for (int i = 0; i < tail - 1; i++) {
-                queue[i] = queue[i + 1];
-            }
-            tail--;
-            return item;
+    public boolean isPalindrome(String input) {
+        char[] inputArray = input.toCharArray();
+        for (int i = 0; i < inputArray.length; i++) {
+            push(inputArray[i]);
         }
+        int size = elements.size();
+        for (int i = 0; i < size / 2; i++) {
+            char item = pop();
+            if (inputArray[i] != item) {
+                return false;
+            }
+        }
+        return true;
     }
+
 }
 
