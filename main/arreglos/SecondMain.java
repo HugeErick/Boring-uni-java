@@ -12,11 +12,17 @@ public class SecondMain {
         System.out.println("Checking if '" + inputString + "' is a palindrome: " + stack.isPalindrome(inputString));
         System.out.println("Checking if '" + inputString2 + "' is a palindrome: " + stack.isPalindrome(inputString2));
 
-        stack.push('u');
+        stack.push('a');
         stack.push('w');
         stack.push('u');
 
+
         System.out.println("Popping items from the stack: " + stack.pop() + ", " + stack.pop() + ", " + stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
+        System.out.println(stack.pop());
 
         Queue queue = new Queue(3);
 
