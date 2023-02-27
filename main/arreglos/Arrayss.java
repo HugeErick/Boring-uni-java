@@ -9,6 +9,14 @@ public class Arrayss {
     int columnasA = matrizA[0].length;
     int columnasB = matrizB[0].length;
 
+    /*
+     0 0
+     0 0
+
+     0 0 
+     0 0
+     */
+
     int[][] resultado = new int[filasA][columnasB];
 
     for (int i = 0; i < filasA; i++) {
