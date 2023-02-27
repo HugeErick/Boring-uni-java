@@ -36,7 +36,7 @@ public class RMain {
     }
 
     // Imprimir los atributos de cada persona
-    System.out.println("nombre" + tab + "trabajo?" + " " + "mujer?" + tab + "doctorao?" + " " + "soltero?");
+    System.out.println("nombre" + tab + "trabajo?" + " " + "mujer?" + tab + "doctorao?" + "" + "soltero?");
     for (Persona persona : personas) {
       System.out.println(persona.getNombre() + ":" + tab + persona.isTrabajo() + tab + persona.isMujer() + tab + persona.isDoctor() + tab + persona.isSoltero());
     }
