@@ -83,52 +83,86 @@ public class RMain {
       System.out.println("4. ¿Está soltero/a?");
       int respuesta = sc.nextInt();
 
+      if(personas[indiceSujeto] != null){
+        switch(respuesta) {
+          case 1:
+            if(!personas[indiceSujeto].isTrabajo()){
+              System.out.println("el sujeto no tiene trabajo");
+            } else {
+              System.out.println("el sujeto si tiene trabajo");
+            }
+            break;
+          case 2:
+            if(!personas[indiceSujeto].isMujer()){
+              System.out.println("el sujeto no se identifica como mujer");
+            } else {
+              System.out.println("el sujeto si se identifica como mujer");
+            }
+            break;
+          case 3:
+            if(!personas[indiceSujeto].isDoctor()){
+              System.out.println("el sujeto no tiene doctorado");
+            } else {
+              System.out.println("el sujeto si tiene doctorado");
+            }
+            break;
+          case 4:
+            if(!personas[indiceSujeto].isSoltero()){
+              System.out.println("el sujeto no esta soltero");
+            } else {
+              System.out.println("el sujeto si esta soltero");
+            }
+            break;
+
+        }
+      }
+
       // Eliminar personas que no tienen la característica indicada
       for (int j = 0; j < personas.length; j++) {
         if (personas[j] != null) { 
           switch (respuesta) {
             case 1:
               if (!personas[j].isTrabajo()) {
-                System.out.println(personas[j].getNombre() + " no tiene trabajo");
+                //System.out.println(personas[j].getNombre() + " no tiene trabajo");
                 if(personas[j] != personas[indiceSujeto]){
                   personas[j] = null;
                 }
                 ++personasEliminadas;
               } else {
-                System.out.println(personas[j].getNombre() + " tiene trabajo");
+                //System.out.println(personas[j].getNombre() + " tiene trabajo");
                 }
               break;
             case 2:
               if (!personas[j].isMujer()) {
-                System.out.println(personas[j].getNombre() + " no se identifica como mujer");
+                //System.out.println(personas[j].getNombre() + " no se identifica como mujer");
                 if(personas[j] != personas[indiceSujeto]){
                   personas[j] = null;
                 }
                 ++personasEliminadas;
               } else {
-                System.out.println(personas[j].getNombre() + " se identifica como mujer");
+                //System.out.println(personas[j].getNombre() + " se identifica como mujer");
               }
               break;
             case 3:
               if (!personas[j].isDoctor()) {
-                System.out.println(personas[j].getNombre() + " no tiene doctorado");
+                //System.out.println(personas[j].getNombre() + " no tiene doctorado");
                 if(personas[j] != personas[indiceSujeto]){
                   personas[j] = null;
                 }
                 ++personasEliminadas;
               } else {
-                System.out.println(personas[j].getNombre() + " tiene doctorado");
+                //System.out.println(personas[j].getNombre() + " tiene doctorado");
               }
               break;
             case 4:
               if (!personas[j].isSoltero()) {
-                System.out.println(personas[j].getNombre() + " no es soltero");
+                //System.out.println(personas[j].getNombre() + " no es soltero");
                 if(personas[j] != personas[indiceSujeto]){
                   personas[j] = null;
                 }
                 ++personasEliminadas;
               } else {
-                System.out.println(personas[j].getNombre() + " es soltero");
+                //System.out.println(personas[j].getNombre() + " es soltero");
               }
               break;
             default:
