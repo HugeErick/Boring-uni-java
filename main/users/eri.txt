@@ -1,0 +1,4 @@
+partidas jugadas
+3
+partidas ganadas
+1
